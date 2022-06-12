@@ -42,6 +42,10 @@
 
 ```(,|\()\w*int [a-z_]+\w*(,|\)))```
 
+* Changes privileges:
+
+```sete*[ug]id\(```
+
 ### Shell
 
 * Setting setUID/setGID perms, or which install a file with setUID/setGID perms:
