@@ -1,4 +1,6 @@
-# code-search
+# [code-search](https://codesearch.debian.net)
+
+![](https://img.shields.io/github/last-commit/timb-machine/linux-malware?style=for-the-badge)
 
 The following is my scribbled notes on some fun search strings that yield results when you feed them into [Debian Code Search](https://codesearch.debian.net).
 
