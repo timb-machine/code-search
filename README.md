@@ -26,7 +26,7 @@
 
 ```[^a-z]crypt\( filetype:c```
 
-* This is actually surprisingly positive:
+* SQL injection:
 
 ```[a-z]+_query\(.*["'][^a-z]+\$_(GET|POST) filetype:php```
 
@@ -53,6 +53,10 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 * Compiler outputs binary with DT_RPATH:
 
 ```-Wl,-rpath=\$.*```
+
+* Command injection:
+
+```(`|eva\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
 
 ## Tips
 
