@@ -42,7 +42,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Function prototype uses a signed integer:
 
-```(,|\()\w*int [a-z_]+\w*(,|\)))```
+```(,|\()\s*int [a-z_]+\s*(,|\))```
 
 * Changes privileges:
 
@@ -54,7 +54,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Uses raw sockets:
 
-```socket.*PACKET, SOCK_RAW```
+```socket.*PACKET,\s*SOCK_RAW```
 
 ### Shell
 
