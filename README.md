@@ -46,6 +46,10 @@
 
 ```sete*[ug]id\(```
 
+* Seeding random with a static value or one derived from time:
+
+```[^\w]srand\(([0-9]*|.*time\() filetype:c```
+
 ### Shell
 
 * Setting setUID/setGID perms, or which install a file with setUID/setGID perms:
