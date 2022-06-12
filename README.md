@@ -2,21 +2,25 @@
 
 ## Queries
 
-* Source files that set setUID/setGID perms, or which install a file with setUID/setGID perms:
+### PHP
 
-```(chmod\s|install\s-m\s)([ug]\+s|[42][75])```
-
-* Source files that set world writable perms:
-
-```( a\+[rx]*w[rx]* | o\+[rx]*w[rx]* )```
-
-* PHP files including user controlled files and directories:
+* Including user controlled files and directories:
 
 ```(include|require)\s+.*\$_(GET|POST)```
 
-* Use of $_GET and $_POST verbatim within function calls:
+* Using $_GET and $_POST verbatim within function calls:
 
 ```\([^)]*\$_(GET|POST)```
+
+* SQL injection:
+
+```[a-z]+_query\(.*["'][^a-z]+\$_(GET|POST) filetype:php```
+
+* Command injection:
+
+```(`|eval\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
+
+### C
 
 * Calling printf() without a string as the first parameter:
 
@@ -26,18 +30,6 @@
 
 ```[^a-z]crypt\( filetype:c```
 
-* SQL injection:
-
-```[a-z]+_query\(.*["'][^a-z]+\$_(GET|POST) filetype:php```
-
-* Private keys:
-
-https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
-
-* Log4J:
-
-```log4j filetype:java```
-
 * Insecure shared memory usage:
 
 ```shm[a-z_]+\(.*(...[67]|S_IWOTH)```
@@ -46,6 +38,32 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 ```getenv.*DEBUG```
 
+* Function prototypes that use a signed integer
+
+```(,|\()\w*int [a-z_]+\w*(,|\)))```
+
+### Shell
+
+* Setting setUID/setGID perms, or which install a file with setUID/setGID perms:
+
+```(chmod\s|install\s-m\s)([ug]\+s|[42][75])```
+
+* Setting world writable perms:
+
+```( a\+[rx]*w[rx]* | o\+[rx]*w[rx]* )```
+
+### Java
+
+* Log4J:
+
+```log4j filetype:java```
+
+### Other
+
+* Private keys:
+
+https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
+
 * Access to /tmp:
 
 ```/tmp/[a-z][a-z][a-z]```
@@ -53,14 +71,6 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 * Compiler outputs binary with DT_RPATH:
 
 ```-Wl,-rpath=\$.*```
-
-* Command injection:
-
-```(`|eva\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
-
-* Function prototypes that use a signed integer
-
-```(,|\()\w*int [a-z_]+\w*(,|\)))```
 
 ## Tips
 
