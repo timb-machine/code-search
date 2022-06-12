@@ -52,6 +52,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```[^\w]srand\(([0-9]*|.*time\() filetype:c```
 
+* Uses raw sockets:
+
+```socket.*PACKET, SOCK_RAW```
+
 ### Shell
 
 * Sets setUID/setGID perms or installing a file with setUID/setGID perms:
