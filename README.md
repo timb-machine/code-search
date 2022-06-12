@@ -4,11 +4,11 @@
 
 ### PHP
 
-* Including user controlled files and directories:
+* Includes user controlled files and directories:
 
 ```(include|require)\s+.*\$_(GET|POST)```
 
-* Using $_GET and $_POST verbatim within function calls:
+* Uses $_GET and $_POST verbatim within function calls:
 
 ```\([^)]*\$_(GET|POST)```
 
@@ -22,15 +22,15 @@
 
 ### C
 
-* Calling printf() without a string as the first parameter:
+* Calls printf() without a string as the first parameter:
 
 ```[^a-z_]printf\([a-z]```
 
-* Things that call crypt(), this time limited to just C code because well, sometimes you'll see functions implemented in multiple language but know they're not really the same:
+* Calls crypt(), this time limited to just C code because well, sometimes you'll see functions implemented in multiple language but know they're not really the same:
 
 ```[^a-z]crypt\( filetype:c```
 
-* Insecure shared memory usage:
+* Uses shared memory insecurely:
 
 ```shm[a-z_]+\(.*(...[67]|S_IWOTH)```
 
@@ -38,7 +38,7 @@
 
 ```getenv.*DEBUG```
 
-* Function prototypes that use a signed integer
+* Function prototype uses a signed integer:
 
 ```(,|\()\w*int [a-z_]+\w*(,|\)))```
 
@@ -46,33 +46,33 @@
 
 ```sete*[ug]id\(```
 
-* Seeding random with a static value or one derived from time:
+* Seeds random with a static value or one derived from time:
 
 ```[^\w]srand\(([0-9]*|.*time\() filetype:c```
 
 ### Shell
 
-* Setting setUID/setGID perms, or which install a file with setUID/setGID perms:
+* Sets setUID/setGID perms or installing a file with setUID/setGID perms:
 
 ```(chmod\s|install\s-m\s)([ug]\+s|[42][75])```
 
-* Setting world writable perms:
+* Sets world writable perms:
 
 ```( a\+[rx]*w[rx]* | o\+[rx]*w[rx]* )```
 
 ### Java
 
-* Log4J:
+* Uses Log4J:
 
 ```log4j filetype:java```
 
 ### Other
 
-* Private keys:
+* Includes private keys:
 
 https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
-* Access to /tmp:
+* Accesses /tmp:
 
 ```/tmp/[a-z][a-z][a-z]```
 
