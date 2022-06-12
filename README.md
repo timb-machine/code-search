@@ -32,7 +32,7 @@
 
 * Private keys:
 
-```https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1```
+https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 * Log4J:
 
