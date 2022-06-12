@@ -58,6 +58,10 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 ```(`|eva\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
 
+* Function prototypes that use a signed integer
+
+```(,|\()\w*int [a-z_]+\w*(,|\)))```
+
 ## Tips
 
 * If you hit the \/ next to "Filter by package" on the results page, you can download the full list of affected packages
