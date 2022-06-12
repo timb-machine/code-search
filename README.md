@@ -46,6 +46,10 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 ```getenv.*DEBUG```
 
+* Access to /tmp:
+
+```/tmp/[a-z][a-z][a-z]```
+
 ## Tips
 
 * If you hit the \/ next to "Filter by package" on the results page, you can download the full list of affected packages
