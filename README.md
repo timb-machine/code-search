@@ -50,6 +50,10 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 ```/tmp/[a-z][a-z][a-z]```
 
+* Compiler outputs binary with DT_RPATH:
+
+```-Wl,-rpath=\$.*```
+
 ## Tips
 
 * If you hit the \/ next to "Filter by package" on the results page, you can download the full list of affected packages
