@@ -1,5 +1,7 @@
 # code-search
 
+The following is my scribbled notes on some fun search strings that yield results when you feed them into [Debian Code Search](https://codesearch.debian.net).
+
 ## Queries
 
 ### PHP
