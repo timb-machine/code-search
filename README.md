@@ -24,6 +24,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```(`|eval\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
 
+* Mass assignment:
+
+```::create\(\$ filetype:php```
+
 ### C
 
 * Calls printf() without a string as the first parameter:
