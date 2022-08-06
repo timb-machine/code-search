@@ -62,6 +62,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```socket.*PACKET,\s*SOCK_RAW```
 
+* Creates a file but sets no permissions:
+
+```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\) filetype:c```
+
 ### Shell
 
 * Sets setUID/setGID perms or installing a file with setUID/setGID perms:
