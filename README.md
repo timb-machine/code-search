@@ -64,7 +64,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Creates a file but sets no permissions:
 
-```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\) filetype:c```
+```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\); filetype:c```
 
 ### Shell
 
