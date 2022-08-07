@@ -96,6 +96,10 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 ```-Wl,-rpath=\$.*```
 
+* Hard coded passwords:
+
+\s+[\$\*]pas.*\s*=\s*\"[a-z0-9]
+
 ## Tips
 
 * If you hit the \/ next to "Filter by package" on the results page, you can download the full list of affected packages
