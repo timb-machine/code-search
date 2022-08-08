@@ -98,7 +98,7 @@ https://codesearch.debian.net/search?q=RSA+PRIVATE&literal=1
 
 * Hard coded passwords:
 
-\s+[\$\*]pas.*\s*=\s*\"[a-z0-9]
+```\s+[\$\*]pas.*\s*=\s*\"[a-z0-9]```
 
 ## Tips
 
