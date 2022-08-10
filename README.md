@@ -66,6 +66,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\); filetype:c```
 
+* Supports variable arguments which may lead to information disclosure
+
+```\.\.\.\) filetype:c```
+
 ### Shell
 
 * Sets setUID/setGID perms or installing a file with setUID/setGID perms:
