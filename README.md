@@ -66,9 +66,25 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\); filetype:c```
 
-* Supports variable arguments which may lead to information disclosure
+* Supports variable arguments which may lead to information disclosure:
 
 ```\.\.\.\) filetype:c```
+
+* Uses possibly weak ciphers:
+
+    * Defaults: ```(SSL_CTX_set_ciphersuites\(.*\"\"\)|SSL_set_cipher_list\(.*\"\"\)|SSL_set_ciphersuites\(.*\"\"\))```
+
+    * Low: ```(SSL_CTX_set_ciphersuites\(.*LOW.*\)|SSL_set_cipher_list\(.*LOW.*\)|SSL_set_ciphersuites\(.*LOW.*\))```
+
+    * Null: ```(SSL_CTX_set_ciphersuites\(.*NULL.*\)|SSL_set_cipher_list\(.*NULL.*\)|SSL_set_ciphersuites\(.*NULL.*\))```
+    
+    * DES: ```(SSL_CTX_set_ciphersuites\(.*DES.*\)|SSL_set_cipher_list\(.*DES.*\)|SSL_set_ciphersuites\(.*DES.*\))```
+    
+    * CBC: ```(SSL_CTX_set_ciphersuites\(.*CBC.*\)|SSL_set_cipher_list\(.*CBC.*\)|SSL_set_ciphersuites\(.*CBC.*\))```
+    
+    * ECB: ```(SSL_CTX_set_ciphersuites\(.*ECB.*\)|SSL_set_cipher_list\(.*ECB.*\)|SSL_set_ciphersuites\(.*ECB.*\))```
+    
+    * MD5: ```(SSL_CTX_set_ciphersuites\(.*MD5.*\)|SSL_set_cipher_list\(.*MD5.*\)|SSL_set_ciphersuites\(.*MD5.*\))```
 
 ### Shell
 
