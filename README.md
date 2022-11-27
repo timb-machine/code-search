@@ -89,6 +89,10 @@ The following is my scribbled notes on some fun search strings that yield result
     * ECB: ```(SSL_CTX_set_ciphersuites\(.*ECB.*\)|SSL_set_cipher_list\(.*ECB.*\)|SSL_set_ciphersuites\(.*ECB.*\))```
     
     * MD5: ```(SSL_CTX_set_ciphersuites\(.*MD5.*\)|SSL_set_cipher_list\(.*MD5.*\)|SSL_set_ciphersuites\(.*MD5.*\))```
+    
+* Sets weak file permissions:
+
+```chmod\(.*?,\s*((0[0-7]|0o[0-7])[0-7]{1,2}?[67]|.*S_IWOTH.*)```
 
 ### Shell
 
