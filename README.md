@@ -28,6 +28,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```::create\(\$ filetype:php```
 
+* Deserialization:
+
+```unserialize\(\$_(POST|GET|COOKIE|REQUEST)```
+
 ### C
 
 * Calls printf() without a string as the first parameter:
