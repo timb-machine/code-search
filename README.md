@@ -94,6 +94,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```chmod\(.*?,\s*((0[0-7]|0o[0-7])[0-7]{1,2}?[67]|.*S_IWOTH.*)```
 
+* Sets weak memory protections:
+
+```mprotect.*\(PROT_WRITE.*PROT_EXEC.*|PROT_EXEC.*PROT_WRITE.*\)```
+
 ### Shell
 
 * Sets setUID/setGID perms or installing a file with setUID/setGID perms:
