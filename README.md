@@ -32,6 +32,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```unserialize\(\$_(POST|GET|COOKIE|REQUEST) filetype:php```
 
+* Performs an LDAP query:
+
+```ldap_search(.*?\w*,\w*\$.*?\w*,.*); filetype:php```
+
 ### C
 
 * Calls printf() without a string as the first parameter:
