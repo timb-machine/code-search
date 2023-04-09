@@ -10,11 +10,11 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Includes user controlled files and directories:
 
-```(include|require)\s+.*\$_(GET|POST)```
+```(include|require)\s+.*\$_(GET|POST) filetype:php```
 
 * Uses $_GET and $_POST verbatim within function calls:
 
-```\([^)]*\$_(GET|POST)```
+```\([^)]*\$_(GET|POST) filetype:php```
 
 * SQL injection:
 
@@ -30,13 +30,13 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Deserialization:
 
-```unserialize\(\$_(POST|GET|COOKIE|REQUEST)```
+```unserialize\(\$_(POST|GET|COOKIE|REQUEST) filetype:php```
 
 ### C
 
 * Calls printf() without a string as the first parameter:
 
-```[^a-z_]printf\([a-z]```
+```[^a-z_]printf\([a-z] filetype:c```
 
 * Calls crypt(), this time limited to just C code because well, sometimes you'll see functions implemented in multiple language but know they're not really the same:
 
@@ -44,19 +44,19 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Uses shared memory insecurely:
 
-```shm[a-z_]+\(.*(...[67]|S_IWOTH)```
+```shm[a-z_]+\(.*(...[67]|S_IWOTH) filetype:c```
 
 * Debug environment:
 
-```getenv.*DEBUG```
+```getenv.*DEBUG filetype:c```
 
 * Function prototype uses a signed integer:
 
-```(,|\()\s*int [a-z_]+\s*(,|\))```
+```(,|\()\s*int [a-z_]+\s*(,|\)) filetype:c```
 
 * Changes privileges:
 
-```sete*[ug]id\(```
+```sete*[ug]id\( filetype:c```
 
 * Seeds random with a static value or one derived from time:
 
@@ -64,7 +64,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Uses raw sockets:
 
-```socket.*PACKET,\s*SOCK_RAW```
+```socket.*PACKET,\s*SOCK_RAW filetype:c```
 
 * Creates a file but sets no permissions:
 
@@ -76,27 +76,27 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Uses possibly weak ciphers:
 
-    * Defaults: ```(SSL_CTX_set_ciphersuites\(.*\"\"\)|SSL_set_cipher_list\(.*\"\"\)|SSL_set_ciphersuites\(.*\"\"\))```
+    * Defaults: ```(SSL_CTX_set_ciphersuites\(.*\"\"\)|SSL_set_cipher_list\(.*\"\"\)|SSL_set_ciphersuites\(.*\"\"\) filetype:c)```
 
-    * Low: ```(SSL_CTX_set_ciphersuites\(.*LOW.*\)|SSL_set_cipher_list\(.*LOW.*\)|SSL_set_ciphersuites\(.*LOW.*\))```
+    * Low: ```(SSL_CTX_set_ciphersuites\(.*LOW.*\)|SSL_set_cipher_list\(.*LOW.*\)|SSL_set_ciphersuites\(.*LOW.*\)) filetype:c```
 
-    * Null: ```(SSL_CTX_set_ciphersuites\(.*NULL.*\)|SSL_set_cipher_list\(.*NULL.*\)|SSL_set_ciphersuites\(.*NULL.*\))```
+    * Null: ```(SSL_CTX_set_ciphersuites\(.*NULL.*\)|SSL_set_cipher_list\(.*NULL.*\)|SSL_set_ciphersuites\(.*NULL.*\)) filetype:c```
     
-    * DES: ```(SSL_CTX_set_ciphersuites\(.*DES.*\)|SSL_set_cipher_list\(.*DES.*\)|SSL_set_ciphersuites\(.*DES.*\))```
+    * DES: ```(SSL_CTX_set_ciphersuites\(.*DES.*\)|SSL_set_cipher_list\(.*DES.*\)|SSL_set_ciphersuites\(.*DES.*\)) filetype:c```
     
-    * CBC: ```(SSL_CTX_set_ciphersuites\(.*CBC.*\)|SSL_set_cipher_list\(.*CBC.*\)|SSL_set_ciphersuites\(.*CBC.*\))```
+    * CBC: ```(SSL_CTX_set_ciphersuites\(.*CBC.*\)|SSL_set_cipher_list\(.*CBC.*\)|SSL_set_ciphersuites\(.*CBC.*\)) filetype:c```
     
-    * ECB: ```(SSL_CTX_set_ciphersuites\(.*ECB.*\)|SSL_set_cipher_list\(.*ECB.*\)|SSL_set_ciphersuites\(.*ECB.*\))```
+    * ECB: ```(SSL_CTX_set_ciphersuites\(.*ECB.*\)|SSL_set_cipher_list\(.*ECB.*\)|SSL_set_ciphersuites\(.*ECB.*\)) filetype:c```
     
-    * MD5: ```(SSL_CTX_set_ciphersuites\(.*MD5.*\)|SSL_set_cipher_list\(.*MD5.*\)|SSL_set_ciphersuites\(.*MD5.*\))```
+    * MD5: ```(SSL_CTX_set_ciphersuites\(.*MD5.*\)|SSL_set_cipher_list\(.*MD5.*\)|SSL_set_ciphersuites\(.*MD5.*\)) filetype:c```
     
 * Sets weak file permissions:
 
-```chmod\(.*?,\s*((0[0-7]|0o[0-7])[0-7]{1,2}?[67]|.*S_IWOTH.*)```
+```chmod\(.*?,\s*((0[0-7]|0o[0-7])[0-7]{1,2}?[67]|.*S_IWOTH.*) filetype:c```
 
 * Sets weak memory protections:
 
-```mprotect.*\(PROT_WRITE.*PROT_EXEC.*|PROT_EXEC.*PROT_WRITE.*\)```
+```mprotect.*\(PROT_WRITE.*PROT_EXEC.*|PROT_EXEC.*PROT_WRITE.*\) filetype:c```
 
 ### Shell
 
@@ -118,7 +118,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Performs an LDAP query:
 
-```bind_as\(.*filter\s*=>\s*[a-zA-Z]```
+```bind_as\(.*filter\s*=>\s*[a-zA-Z] filetype:ruby```
 
 ### Other
 
