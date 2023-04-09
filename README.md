@@ -114,6 +114,12 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```log4j filetype:java```
 
+### Ruby
+
+* Performs an LDAP query:
+
+```bind_as\(.*filter\s*=>\s*[a-zA-Z]```
+
 ### Other
 
 * Includes private keys:
