@@ -74,6 +74,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```=\s+open\([^,]+,[^,]+O_CREAT[^,]+\); filetype:c```
 
+* Accesses files from /tmp:
+
+```open\(.*\/tmp filetype:c```
+
 * Supports variable arguments which may lead to information disclosure:
 
 ```\.\.\.\) filetype:c```
