@@ -106,6 +106,12 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```mprotect.*\(PROT_WRITE.*PROT_EXEC.*|PROT_EXEC.*PROT_WRITE.*\) filetype:c```
 
+### C++
+
+* Creates a DBUS service
+
+```QDBusConnection%3A%3AsessionBus().registerService(```
+
 ### Shell
 
 * Sets setUID/setGID perms or installing a file with setUID/setGID perms:
