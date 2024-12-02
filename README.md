@@ -110,6 +110,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```strcpy\(.+, argv\[```
 
+* Uses XOR-based cipher:
+
+```crypt.*[ ]+\^[ ]+[0-9]  filetype:c```
+
 ### C++
 
 * Creates a DBUS service
