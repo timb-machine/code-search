@@ -144,6 +144,12 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```@app.route\( filetype:py```
 
+### Docker
+
+* Runs as root:
+
+````USER root path:Dockerfile```
+
 ### Other
 
 * Includes private keys:
