@@ -148,7 +148,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Runs as root:
 
-````USER root path:Dockerfile```
+```USER root path:Dockerfile```
 
 ### Other
 
