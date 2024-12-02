@@ -134,6 +134,12 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```bind_as\(.*filter\s*=>\s*[a-zA-Z] filetype:ruby```
 
+### Python
+
+* Command injection:
+
+```subprocess\..*\(\".*{ filetype:py```
+
 ### Other
 
 * Includes private keys:
