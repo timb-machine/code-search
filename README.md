@@ -106,6 +106,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```mprotect.*\(PROT_WRITE.*PROT_EXEC.*|PROT_EXEC.*PROT_WRITE.*\) filetype:c```
 
+* Copies argv[] without checking the length
+
+```strcpy\(.+, argv\[```
+
 ### C++
 
 * Creates a DBUS service
