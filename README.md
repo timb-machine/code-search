@@ -122,6 +122,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```( a\+[rx]*w[rx]* | o\+[rx]*w[rx]* )```
 
+* Hard coded passwords:
+
+```useradd.* -p```
+
 ### Java
 
 * Uses Log4J:
