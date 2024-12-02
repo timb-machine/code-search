@@ -140,6 +140,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```subprocess\..*\(\".*{ filetype:py```
 
+* Implements Flask route:
+
+```@app.route\( filetype:py```
+
 ### Other
 
 * Includes private keys:
