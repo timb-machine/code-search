@@ -114,6 +114,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```crypt.*[ ]+\^[ ]+[0-9] filetype:c```
 
+* Uses XOR-based hash:
+
+```hash.*[ ]+\^[ ]+[0-9] filetype:c```
+
 ### C++
 
 * Creates a DBUS service
