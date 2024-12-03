@@ -1,6 +1,10 @@
 # [code-search](https://codesearch.debian.net)
 
-![](https://img.shields.io/github/last-commit/timb-machine/linux-malware?style=for-the-badge)
+![](https://img.shields.io/github/last-commit/timb-machine/code-search?style=for-the-badge)
+
+[Rolling 7 day view of updates from this repo](https://github.com/timb-machine/code-search/compare/main@%7B7day%7D...main)
+
+[Submissions?](https://github.com/timb-machine/code-search/blob/main/doc/HACKING)
 
 The following is my scribbled notes on some fun search strings that yield results when you feed them into [Debian Code Search](https://codesearch.debian.net).
 
