@@ -164,6 +164,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```@app.route\( filetype:py```
 
+* Performs decompression
+
+```shutil.copyfileobj\( filetype:python```
+
 ### Docker
 
 * Runs as root:
