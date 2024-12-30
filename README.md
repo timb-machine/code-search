@@ -72,15 +72,15 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Seeds random with a static value:
 
-```[^\w]srand\([0-9]+ filetype:c```
+```srand\([0-9]+ filetype:c```
 
 * Seeds random with a value derived from UNIX time:
 
-```[^\w]srand\(.*time\( filetype:c```
+```srand\(.*time\( filetype:c```
 
 * Seeds random with a value derived from current PID:
 
-```[^\w]srand\(.*getpid\( filetype:c```
+```srand\(.*getpid\( filetype:c```
 
 * Uses raw sockets:
 
