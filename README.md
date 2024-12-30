@@ -14,19 +14,19 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Includes user controlled files and directories:
 
-```(include|require)\s+.*\$_(GET|POST) filetype:php```
+```(include|require)\s+.*\$_[GPRSC] filetype:php```
 
 * Uses $_GET and $_POST verbatim within function calls:
 
-```\([^)]*\$_(GET|POST) filetype:php```
+```\([^)]*\$_[GPRSC] filetype:php```
 
 * SQL injection:
 
-```[a-z]+_query\(.*["'][^a-z]+\$_(GET|POST) filetype:php```
+```[a-z]+_query\(.*["'][^a-z]+\$_[GPRSC] filetype:php```
 
 * Command injection:
 
-```(`|eval\(|system\(|exec\(|shell_exec\().*\$_(GET|POST) filetype:php```
+```(`|eval\(|system\(|exec\(|shell_exec\().*\$_[GPRSC] filetype:php```
 
 * Mass assignment:
 
@@ -34,7 +34,7 @@ The following is my scribbled notes on some fun search strings that yield result
 
 * Deserialization:
 
-```unserialize\(\$_(POST|GET|COOKIE|REQUEST) filetype:php```
+```unserialize\(\$_[GPRSC] filetype:php```
 
 * Performs an LDAP query:
 
