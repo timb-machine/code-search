@@ -66,9 +66,21 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```sete*[ug]id\( filetype:c```
 
-* Seeds random with a static value or one derived from time:
+* Uses UNIX time
 
-```[^\w]srand\(([0-9]*|.*time\() filetype:c```
+```filetype:c time\(```
+
+* Seeds random with a static value:
+
+```[^\w]srand\([0-9]+ filetype:c```
+
+* Seeds random with a value derived from UNIX time:
+
+```[^\w]srand\(.*time\( filetype:c```
+
+* Seeds random with a value derived from current PID:
+
+```[^\w]srand\(.*getpid\( filetype:c```
 
 * Uses raw sockets:
 
