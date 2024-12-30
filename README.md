@@ -12,13 +12,13 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ### PHP
 
+* Uses $_GET, $_POST, $_REQUEST, $_SERVER and/or $_COOKIE verbatim within function calls:
+
+```\([^)]*\$_[GPRSC] filetype:php```
+
 * Includes user controlled files and directories:
 
 ```(include|require)\s+.*\$_[GPRSC] filetype:php```
-
-* Uses $_GET and $_POST verbatim within function calls:
-
-```\([^)]*\$_[GPRSC] filetype:php```
 
 * SQL injection:
 
