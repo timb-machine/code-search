@@ -10,6 +10,12 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ## Queries
 
+### Perl
+
+* Uses bcrypt() for hashing:
+
+```use (Digest|Crypt)::Bcrypt filetype:perl```
+
 ### PHP
 
 * Uses $_GET, $_POST, $_REQUEST, $_SERVER and/or $_COOKIE verbatim within function calls:
