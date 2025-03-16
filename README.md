@@ -166,6 +166,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```log4j filetype:java```
 
+* Disables security manager
+
+```System.setSecurityManager```
+
 ### Ruby
 
 * Performs an LDAP query:
