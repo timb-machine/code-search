@@ -46,6 +46,10 @@ The following is my scribbled notes on some fun search strings that yield result
 
 ```ldap_search(.*?\w*,\w*\$.*?\w*,.*); filetype:php```
 
+* Uses magic headers:
+
+```apache_request_headers|getallheaders|_HEADER."HTTP_ filetype:php```
+
 ### C
 
 * Calls printf() without a string as the first parameter:
@@ -189,6 +193,12 @@ The following is my scribbled notes on some fun search strings that yield result
 * Performs decompression
 
 ```shutil.copyfileobj\( filetype:python```
+
+### JavaScript
+
+* Uses magic headers:
+
+```setRequestHeader```
 
 ### Docker
 
